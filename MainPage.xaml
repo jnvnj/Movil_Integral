@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallonParty.MainPage">
+
+    <!-- Usamos ScrollView para hacer que el contenido sea desplazable -->
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+
+            <!-- Título principal de la página -->
+            <Label Text="Arreglos de Salón de Fiesta" 
+                   FontSize="Large" 
+                   TextColor="#8C52FF" 
+                   HorizontalOptions="Center"/>
+
+            <!-- CollectionView para mostrar la lista de productos -->
+            <CollectionView ItemsSource="{Binding Products}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="#8C52FF" 
+                               BackgroundColor="#FFFFFF" 
+                               CornerRadius="10" 
+                               Padding="10" 
+                               Margin="5">
+                            <StackLayout>
+                                <!-- Imagen del producto -->
+                                <Image Source="{Binding Image}" 
+                                       Aspect="AspectFill" 
+                                       HeightRequest="100"/>
+
+                                <!-- Nombre del producto -->
+                                <Label Text="{Binding Name}" 
+                                       FontSize="Medium" 
+                                       TextColor="#8C52FF"/>
+
+                                <!-- Descripción del producto -->
+                                <Label Text="{Binding Description}" 
+                                       FontSize="Small" 
+                                       TextColor="#6D6D6D"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Botón para contactar -->
+            <Button Text="Contactar para una cita"
+                    BackgroundColor="#8EC1FA"
+                    TextColor="White"
+                    Margin="10"
+                    Clicked="OnContactButtonClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

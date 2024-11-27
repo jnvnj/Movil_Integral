@@ -1,0 +1,13 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallonParty.ContactPage"
+             Title="ContactPage">
+    <StackLayout Padding="30" Spacing="20">
+        <Label Text="Agenda tu Cita" FontSize="Large" TextColor="#8C52FF" HorizontalOptions="Center" />
+        <Entry x:Name="nombreEntry" Placeholder="Nombre Completo" BackgroundColor="#E3F2FD" />
+        <Entry x:Name="correoEntry" Placeholder="Correo Electrónico" BackgroundColor="#E3F2FD" Keyboard="Email" />
+        <Entry x:Name="telefonoEntry" Placeholder="Teléfono" BackgroundColor="#E3F2FD" Keyboard="Telephone" />
+        <Editor x:Name="detallesEditor" Placeholder="Detalles del Evento" BackgroundColor="#E3F2FD" HeightRequest="100"/>
+        <Button Text="Enviar" BackgroundColor="#8EC1FA" TextColor="White" Clicked="OnEnviarClicked"/>
+    </StackLayout>
+</ContentPage>

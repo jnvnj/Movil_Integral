@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallonParty.LoginPage"
+             Title="LoginPage">
+    
+    <StackLayout Padding="30" Spacing="20">
+        <Image Source="logo.png" HorizontalOptions="Center" WidthRequest="100" HeightRequest="100" />
+        <Entry x:Name="emailEntry" Placeholder="Inserte Email" BackgroundColor="#E3F2FD" />
+        <Entry x:Name="passwordEntry" Placeholder="Ingrese Contraseña" IsPassword="True" BackgroundColor="#E3F2FD" />
+        <Button Text="LOGIN" BackgroundColor="#8EC1FA" TextColor="White" Clicked="OnLoginClicked"/>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="rememberMeCheckBox" />
+            <Label Text="Recuérdame" VerticalOptions="Center" />
+        </StackLayout>
+        <Label Text="¿Olvidaste tu contraseña?" TextColor="#8EC1FA" HorizontalOptions="Center" />
+        <Label Text="No tengo cuenta" TextColor="#8EC1FA" HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
